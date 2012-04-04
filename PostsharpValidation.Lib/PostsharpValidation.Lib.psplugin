@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PlugIn xmlns="http://schemas.postsharp.org/1.0/configuration">
+  <TaskType Name="ValidationProcessor"
+            Implementation="Omniscientist.AspectWeaver.ValidationProcessorTask, Omniscientist.AspectWeaver"
+            Phase="Transform">
+    <Dependency TaskType="CodeWeaver" Position="After"/>
+  </TaskType>
+</PlugIn>
