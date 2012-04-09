@@ -13,17 +13,13 @@ namespace PostsharpValidation.Lib
     /// Provides a PostSharp <see cref="Task"/> that applies advice that processes any validation attributes that decorate elements of our
     /// code.
     /// </summary>
-    public class ValidationProcessorTask : Task, IAdviceProvider
+    public class ValidationProcessorTask : Task
     {
-        private Weaver codeWeaver;
+        private readonly Weaver codeWeaver;
 
-        /// <summary>
-        /// Entrypoint to this task which, in turn, triggers its execution.
-        /// </summary>
-        /// <param name="weaver">The active code weaver, provided by PostSharp.</param>
-        public void ProvideAdvices(Weaver weaver)
+        public ValidationProcessorTask()
         {
-            this.codeWeaver = weaver;
+            codeWeaver = new Weaver(Project);
 
             WeaveMethods();
             WeaveProperties();

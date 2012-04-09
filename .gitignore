@@ -1,7 +1,8 @@
 obj
 bin
 packages/*
-.nuget/
+packages/PostSharp.*/*
+packages/PostSharp.*/tools/*
 _ReSharper.*
 *.csproj.user
 *.resharper
@@ -11,3 +12,6 @@ _ReSharper.*
 *.swp
 
 !/packages/repositories.config
+!packages/PostSharp*/
+!packages/PostSharp*/tools/
+!packages/PostSharp*/tools/PostSharp.targets

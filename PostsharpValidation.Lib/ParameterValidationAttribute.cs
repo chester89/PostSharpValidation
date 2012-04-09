@@ -25,8 +25,7 @@ namespace PostsharpValidation.Lib
         /// <summary>
         /// Gets the name of the method that the parameter of interest belongs to.
         /// </summary>
-        protected string MethodName
-        { get; private set; }
+        protected string MethodName { get; private set; }
 
         /// <inheritdoc/>
         [CLSCompliant(false)]
